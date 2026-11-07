@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Design using Flexbox and CSS Grid</title>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* FLEXBOX LAYOUT */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .flex-item {
+            background-color: white;
+            padding: 20px;
+
+            width: 150px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* GRID LAYOUT */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 200px auto;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .header {
+            grid-column: 1 / 3;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header,
+            .footer {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Layout Design using Flexbox and CSS Grid</h1>
+
+    <h2>Flexbox Layout</h2>
+
+    <div class="flex-container">
+        <div class="flex-item">Home</div>
+        <div class="flex-item">About</div>
+        <div class="flex-item">Services</div>
+        <div class="flex-item">Contact</div>
+    </div>
+
+    <h2>CSS Grid Layout</h2>
+
+    <div class="grid-container">
+
+        <div class="grid-item header">
+            Header
+        </div>
+
+        <div class="grid-item">
+            Sidebar
+        </div>
+
+        <div class="grid-item">
+            Main Content
+        </div>
+
+        <div class="grid-item footer">
+            Footer
+        </div>
+
+    </div>
+
+</body>
+</html>
